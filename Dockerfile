@@ -1,6 +1,5 @@
 FROM alpine:latest
 RUN apk add --no-cache curl
-WORKDIR /script
+WORKDIR /usr/src
 COPY entrypoint.sh .
-RUN chmod +x /script/entrypoint.sh && pwd && ls -la
-ENTRYPOINT ["/script/entrypoint.sh"]
+ENTRYPOINT ["/usr/src/entrypoint.sh"]
