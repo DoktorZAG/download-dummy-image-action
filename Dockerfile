@@ -1,5 +1,5 @@
-FROM alpine:3.19
+FROM alpine:latest
 RUN apk add --no-cache curl
-WORKDIR /usr/src
+WORKDIR /script
 COPY entrypoint.sh .
-ENTRYPOINT ["/usr/src/entrypoint.sh"]
+ENTRYPOINT ["/script/entrypoint.sh"]
